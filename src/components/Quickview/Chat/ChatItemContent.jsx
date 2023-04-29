@@ -3,7 +3,7 @@ import React from 'react'
 const ChatItemContent = (props) => {
     return (
         <li className="chat-user-list clearfix" onClick={() => props.click(true)}>
-            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" className="" href="#">
+            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" className="" href="javascript:void(0);">
             <span className="col-xs-height col-middle">
             <span className="thumbnail-wrapper d32 circular bg-success">
                 <img width="34" height="34" alt="" data-src-retina={props.imageExt} data-src={props.image} src={props.imageExt} className="col-top"/>

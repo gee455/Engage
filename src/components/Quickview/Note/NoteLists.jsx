@@ -1,11 +1,11 @@
 import React from 'react'
-
+import PerfectScrollbar from 'react-perfect-scrollbar';
 import NoteListItem from './NoteListItem';
 
 const NoteLists = (props) => {
     if(props.list){
         return (
-            <ul>
+            <PerfectScrollbar component="ul">
                 { /* BEGIN Note Item */ }
                 {props.list.map((note, index) => {
                     return (
@@ -22,8 +22,7 @@ const NoteLists = (props) => {
                     )
                 })}
                 { /* END Note List */ }
-            </ul>
-		
+			</PerfectScrollbar>
         )
     } else {
         return <p>Loading..</p>

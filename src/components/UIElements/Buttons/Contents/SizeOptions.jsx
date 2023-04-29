@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../../Button';
+import Button from '../../Button/UtilsButton';
 
 const SizeOptions = () => {
     return (
@@ -22,7 +22,7 @@ const SizeOptions = () => {
                     </div>
                     <div className="col-lg-6">
                         <div className="pull-right sm-pull-left">
-                            <Button type="default" size="lg" moresize="larger">Large Button</Button>
+                            <Button type="default" size="lg" moresize="larger" utilclass="m-t-10">Large Button</Button>
                             <br/>
                             <Button type="default" utilclass="m-t-10">Default Button</Button>
                             <br/>

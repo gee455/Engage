@@ -14,7 +14,7 @@ const content = ({ path }) => {
 					<PageContainer className=" sm-p-l-0 sm-p-r-0">
 						<PageScroll>
 							<PageBreadcrumb>
-								<li className="breadcrumb-item"><a href="#">Layouts</a></li>
+								<li className="breadcrumb-item"><a href="javascript:void(0);">Layouts</a></li>
 								<li className="breadcrumb-item active">Boxed</li>
 							</PageBreadcrumb>
 						</PageScroll>

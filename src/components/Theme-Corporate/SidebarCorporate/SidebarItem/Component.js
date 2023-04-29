@@ -10,18 +10,18 @@ const Component = ({
   iconWrapperClass,
   topMargin,
   children,
+  subMenuItem,
   ...props
 }) => {
   return (
     <li className={topMargin}>
-      <NavLink
-        exact
-        to={url}
-        {...props}
-        className="detailed"
-      >
-        <span className="title">{title}</span>
-        <span className="details">{subTitle}</span>
+      <NavLink exact to={url} {...props} className="detailed">
+        <span
+          className={subTitle || subMenuItem ? "title" : "title line-height-40"}
+        >
+          {title}
+        </span>
+        {subTitle && <span className="details">{subTitle}</span>}
       </NavLink>
       <span className={`${iconWrapperClass} icon-thumbnail`}>{icon}</span>
       {children}

@@ -15,7 +15,7 @@ const content = ({ path }) => {
 						<PageScroll>
 							<PageBreadcrumb>
 								<li className="breadcrumb-item">
-									<a href="#">Pages</a>
+									<a href="javascript:void(0);">Pages</a>
 								</li>
 								<li className="breadcrumb-item active">Blank template</li>
 							</PageBreadcrumb>

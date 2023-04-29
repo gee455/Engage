@@ -18,21 +18,21 @@ const Component = () => {
                 <ul>
                 <li className="">
                     <div className="dropdown">
-                    <a data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    <a data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
                         <i className="portlet-icon portlet-icon-settings"></i>
                     </a>
                     <ul className="dropdown-menu pull-right" role="menu">
-                        <li><a href="#">AAPL</a>
+                        <li><a href="javascript:void(0);">AAPL</a>
                         </li>
-                        <li><a href="#">YHOO</a>
+                        <li><a href="javascript:void(0);">YHOO</a>
                         </li>
-                        <li><a href="#">GOOG</a>
+                        <li><a href="javascript:void(0);">GOOG</a>
                         </li>
                     </ul>
                     </div>
                 </li>
                 <li>
-                    <a data-toggle="refresh" className="portlet-refresh text-black" href="#"><i
+                    <a data-toggle="refresh" className="portlet-refresh text-black" href="javascript:void(0);"><i
                         className="portlet-icon portlet-icon-refresh"></i></a>
                 </li>
                 </ul>

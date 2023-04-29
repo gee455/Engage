@@ -66,7 +66,7 @@ const Component = () => {
             <div className="panel-heading top-right">
             <div className="panel-controls">
                 <ul>
-                <li><a href="#" className="portlet-refresh text-black" data-toggle="refresh"><i
+                <li><a href="javascript:void(0);" className="portlet-refresh text-black" data-toggle="refresh"><i
                     className="portlet-icon portlet-icon-refresh"></i></a>
                 </li>
                 </ul>

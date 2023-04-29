@@ -5,6 +5,7 @@ import HeaderComponent from "../../../ui/Header/Component";
 import SubMenuPageWrapperComponent from "./Content";
 
 const Component = ({ location }) => {
+	let path = location.pathname;
 	return (
 		<CustomHeaderLayout location={location}>
 			<div

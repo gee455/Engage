@@ -6,7 +6,7 @@ const Component = () => {
             <div className="panel-heading top-right">
             <div className="panel-controls">
                 <ul>
-                <li><a data-toggle="refresh" className="portlet-refresh text-black" href="#"><i
+                <li><a data-toggle="refresh" className="portlet-refresh text-black" href="javascript:void(0);"><i
                     className="portlet-icon portlet-icon-refresh"></i></a>
                 </li>
                 </ul>
@@ -151,7 +151,7 @@ const Component = () => {
             </div>
             <div className="padding-25">
             <p className="small no-margin">
-                <a href="#"><i className="fa fs-16 fa-arrow-circle-o-down text-success m-r-10"></i></a>
+                <a href="javascript:void(0);"><i className="fa fs-16 fa-arrow-circle-o-down text-success m-r-10"></i></a>
                 <span className="hint-text ">Show more details of APPLE . INC</span>
             </p>
             </div>

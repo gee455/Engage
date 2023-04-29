@@ -7,12 +7,6 @@ import Cards from "../components/Card";
 import Views from "../components/View";
 import Chart from "../components/Chart";
 
-import Calendar from "../components/Calendar/Basic";
-import CalendarLang from "../components/Calendar/Languages";
-import CalendarMonth from "../components/Calendar/Month";
-import CalendarLazy from "../components/Calendar/Lazyload";
-import CalendarDocs from "../components/Calendar/Documentation";
-
 import Builder from "../components/Builder";
 
 import LayoutsBox from "../components/Layouts/Box";
@@ -20,7 +14,7 @@ import LayoutsDefault from "../components/Layouts/Default";
 import LayoutsRtl from "../components/Layouts/Rtl";
 import LayoutsSecondary from "../components/Layouts/Secondary";
 
-import UIElementsColor from "../components/UIElements/Color";
+import UIElementsColor from "../components/Theme-Condensed/Color";
 import UIElementstypography from "../components/UIElements/Typography";
 import UIElementsIcons from "../components/UIElements/Icons";
 import UIElementsButtons from "../components/UIElements/Buttons";
@@ -56,86 +50,109 @@ import MenuLevelOne from "../components/MenuLevel/LevelOne";
 import Submenu from "../components/MenuLevel/LevelTwo/Submenu";
 
 import Header from "../components/Theme-Corporate/Header";
-import Sidebar from '../components/Theme-Corporate/SidebarCorporate';
+import Sidebar from "../components/Theme-Corporate/SidebarCorporate";
 import Dashboard from "../components/Theme-Corporate/Dashboard";
+import Search from "../components/Theme-Corporate/Search";
 import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const Corporate = ({ location }) => {
-  let path = location.pathname
+  if (window.location.pathname.includes("corporate")) {
+    require("../pages/scss/themes/corporate/corporate.scss");
+  }
+  let path = location.pathname;
   const [toggleInboxHeader, setToggleInboxHeader] = useState(false);
 
   useEffect(() => {
     window.addEventListener("resize", (e) => {
       setToggleInboxHeader(false);
     });
+
     return () => window.removeEventListener("resize", null);
   });
 
-  if (path.includes('/corporate')) {
-    document.body.classList.remove('pace-done')
-    document.body.classList.add('mac');
-    document.body.classList.add('desktop');
-    document.body.classList.add('js-focus-visible');
-    document.body.classList.add('pace-done');
-    document.body.classList.add('menu-unpinned');
-    document.body.classList.add('menu-pin');
-    document.body.classList.add('corporate');
-    if (path.includes('boxed_layout')) {
-      //fixed-header menu-pin box-layout  mac desktop js-focus-visible pace-done
-      document.body.classList.remove('menu-unpinned');
-      document.body.classList.add('fixed-header');
-      document.body.classList.add('box-layout');
+  if (path.includes("/cards")) {
+    document.body.classList.add("cards-view-page");
+  }
+  else{
+	document.body.classList.remove("cards-view-page");
+  }
 
+  if (path.includes("/corporate")) {
+    document.body.classList.remove("pace-done");
+    document.body.classList.add("mac");
+    document.body.classList.add("desktop");
+    document.body.classList.add("js-focus-visible");
+    document.body.classList.add("pace-done");
+    document.body.classList.add("menu-unpinned");
+    document.body.classList.add("menu-pin");
+    document.body.classList.add("corporate");
+    document.body.classList.add("menu-behind");
+    if (path.includes("boxed_layout")) {
+      //fixed-header menu-pin box-layout  mac desktop js-focus-visible pace-done
+      document.body.classList.remove("menu-unpinned");
+      document.body.classList.add("fixed-header");
+      document.body.classList.add("box-layout");
     } else {
-      document.body.classList.remove('box-layout')
-      document.body.classList.add('fixed-header');
+      document.body.classList.remove("box-layout");
+      document.body.classList.add("fixed-header");
     }
     const { innerWidth: width, innerHeight: height } = window;
-    width < 1200 && width > 991 ? document.body.classList.remove('menu-pin') : document.body.classList.add('menu-pin');
-
-
+    width < 1200 && width > 991
+      ? document.body.classList.remove("menu-pin")
+      : document.body.classList.add("menu-pin");
   }
   return (
-    <div>
-      {path.includes('/corporate') &&
+    <div className="h-100">
+      {path.includes("/corporate") &&
         !path.includes("/boxed_layout") &&
         !path.includes("/login") &&
         !path.includes("/register") &&
         !path.includes("/lock_screen") &&
         !path.includes("/404") &&
-        !path.includes("/500") &&
-        <div className="page-content-wrapper full-height">
-          <div className="content full-height"><Sidebar location={location} />
+        !path.includes("/500") && (
+          <div className="">
+            <div className="">
+              <Sidebar location={location} />
+            </div>
           </div>
-        </div>}
+        )}
 
-      <div className=" " >
-        {path.includes('/corporate') &&
+      <div className="full-height">
+        {path.includes("/corporate") &&
           !path.includes("/boxed_layout") &&
           !path.includes("/login") &&
           !path.includes("/register") &&
           !path.includes("/lock_screen") &&
           !path.includes("/404") &&
-          !path.includes("/500") &&
-          <Header location={location} inboxHeader={toggleInboxHeader} setInboxHeader={(value) => setToggleInboxHeader(value)} />}
+          !path.includes("/500") && (
+            <Header
+              location={location}
+              inboxHeader={toggleInboxHeader}
+              setInboxHeader={(value) => setToggleInboxHeader(value)}
+            />
+          )}
 
-        {path.includes('/corporate') &&
-          <div className="page-container " >
-            {/* <Route exact={true} path="/corporate/" component={Dashboard} />
-            <Route path="/corporate/dashboard" component={Dashboard} /> */}
-          </div>}
+        {path.includes("/corporate") && (
+          <>
+            <Route exact={true} path="/corporate/" component={Dashboard} />
+            <Route path="/corporate/dashboard" component={Dashboard} />
+          </>
+        )}
 
         <Route path="/corporate/social" component={Social} />
-        <Route path="/corporate/email" render={() => <Email inboxHeader={toggleInboxHeader} location={location} />} />
-        <Route path="/corporate/compose_email" render={() => <ComposeEmail inboxHeader={toggleInboxHeader} location={location} />} />
-        {/* START Calendar group routes */}
-        <Route path="/corporate/calendar/basic" component={Calendar} />
-        <Route path="/corporate/calendar/languages" component={CalendarLang} />
-        <Route path="/corporate/calendar/Month" component={CalendarMonth} />
-        <Route path="/corporate/calendar/lazyload" component={CalendarLazy} />
-        <Route path="/corporate/calendar_docs" component={CalendarDocs} />
-        {/* END Calendar routes */}
+        <Route
+          path="/corporate/email"
+          render={() => (
+            <Email inboxHeader={toggleInboxHeader} location={location} />
+          )}
+        />
+        <Route
+          path="/corporate/compose_email"
+          render={() => (
+            <ComposeEmail inboxHeader={toggleInboxHeader} location={location} />
+          )}
+        />
 
         {/* START Builder route */}
         <Route path="/corporate/builder" component={Builder} />
@@ -143,7 +160,10 @@ const Corporate = ({ location }) => {
 
         {/* START Layouts group routes */}
         <Route path="/corporate/default_layout" component={LayoutsDefault} />
-        <Route path="/corporate/secondary_layout" component={LayoutsSecondary} />
+        <Route
+          path="/corporate/secondary_layout"
+          component={LayoutsSecondary}
+        />
         <Route path="/corporate/boxed_layout" component={LayoutsBox} />
         <Route path="/corporate/rtl_layout" component={LayoutsRtl} />
         {/* END Layouts routes */}
@@ -155,8 +175,14 @@ const Corporate = ({ location }) => {
         <Route path="/corporate/buttons" component={UIElementsButtons} />
         <Route path="/corporate/notifications" component={UIElementsNotify} />
         <Route path="/corporate/modals" component={UIElementsModal} />
-        <Route path="/corporate/progress" component={UIElementsProgressActivity} />
-        <Route path="/corporate/tabs_accordian" component={UIElementsTabsAccordion} />
+        <Route
+          path="/corporate/progress"
+          component={UIElementsProgressActivity}
+        />
+        <Route
+          path="/corporate/tabs_accordian"
+          component={UIElementsTabsAccordion}
+        />
         <Route path="/corporate/sliders" component={UIElementsSliders} />
         <Route path="/corporate/tree_view" component={UIElementsTreeView} />
         <Route path="/corporate/nestables" component={UIElementsNestables} />
@@ -190,7 +216,10 @@ const Corporate = ({ location }) => {
         <Route path="/corporate/extra/blank_template" component={ExtraBlank} />
         <Route path="/corporate/extra/login" component={ExtraLogin} />
         <Route path="/corporate/extra/register" component={ExtraRegister} />
-        <Route path="/corporate/extra/lock_screen" component={ExtraLockScreen} />
+        <Route
+          path="/corporate/extra/lock_screen"
+          component={ExtraLockScreen}
+        />
         <Route path="/corporate/extra/gallery" component={ExtraGallery} />
         <Route path="/corporate/extra/timeline" component={ExtraTimeLine} />
         {/* END Extra routes */}
@@ -200,13 +229,9 @@ const Corporate = ({ location }) => {
         <Route path="/corporate/submenu" component={Submenu} />
         {/* END Menu Levels routes */}
 
-        {/* <Route path="/corporatedocs" component={}/>
-        <Route path="/corporatechange_log" component={}/> */}
-
-        {/* <Quickview/>
-        <Search/> */}
+        {path.includes("/corporate") && <Search />}
       </div>
-    </div >
+    </div>
   );
 };
 

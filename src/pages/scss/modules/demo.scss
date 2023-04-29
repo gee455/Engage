@@ -19,7 +19,7 @@ $builder-options-header-height: 102px;
       content: "";
       position: absolute;
       top: 84px;
-      @include right( -10px );
+      @include right(-10px);
       z-index: 10;
     }
   }
@@ -62,8 +62,8 @@ $builder-options-header-height: 102px;
     }
   }
   .builder-footer {
-    @include right( 0 );
-    @include left( 0 );
+    @include right(0);
+    @include left(0);
     z-index: 10;
   }
   .theme-selector.active:before {
@@ -113,7 +113,7 @@ $builder-options-header-height: 102px;
     width: 54px;
     height: 50px;
     top: 20%;
-    @include left( -48px );
+    @include left(-48px);
     text-align: center;
     line-height: 50px;
     cursor: pointer;
@@ -150,8 +150,8 @@ $builder-options-header-height: 102px;
 }
 .rtl {
   .builder .builder-toggle {
-    @include left( auto );
-    @include right( -48px );
+    @include left(auto);
+    @include right(-48px);
   }
 }
 .content-builder {
@@ -164,10 +164,10 @@ $builder-options-header-height: 102px;
     &:after {
       content: "Content goes here";
       position: absolute;
-      @include left( 0 );
+      @include left(0);
       top: 50%;
       margin-top: -10px;
-      @include right( 0 );
+      @include right(0);
       text-align: center;
       font-size: 26px;
       opacity: 0.16;
@@ -207,10 +207,10 @@ $builder-options-header-height: 102px;
   max-width: 600px;
 }
 .demo-mw-AA {
-	max-width: 485px;
+  max-width: 485px;
 }
 .demo-mw-calib {
-	max-width: 310px;
+  max-width: 310px;
 }
 .demo-container {
   height: 2000px;

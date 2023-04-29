@@ -1,14 +1,13 @@
 import React from "react";
-
-import WithoutHeaderLayout from "../../shared/Layouts/WithoutHeader";
-import Header from "../Header";
 import ContentWrapperComponent from "./Content";
 
-const Component = ({ location }) => {
-  // console.log(location);
+const Component = () => {
   return (
     /* START PAGE CONTENT WRAPPER */
-    <ContentWrapperComponent />
+    <div className="page-container">
+      <ContentWrapperComponent />
+    </div>
+
     /* END PAGE CONTENT WRAPPER */
   );
 };

@@ -250,6 +250,17 @@ form legend {
   }
 }
 
+.input-pages-text{
+	background-color: $color-contrast-lowest;
+	color: fade($color-contrast-high, 67%);
+	font-size: 14px;
+	border: 1px solid $color-border-a;	
+	padding-top: 15px;
+	padding-bottom: 14px;
+	margin-bottom: auto;
+	border-radius: 2px;
+}
+
 /* Form layouts
 --------------------------------------------------
 */
@@ -919,6 +930,8 @@ label.error {
 .validation-popover {
   background: $color-black;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+  left:35%;
+//   top: -20px; 
   .popover-body {
     padding: 4px 8px;
     font-size: 12px;

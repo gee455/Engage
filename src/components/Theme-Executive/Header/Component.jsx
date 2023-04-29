@@ -8,10 +8,10 @@ import "./style.css";
 const Component = ({ location, inboxHeader, openMobileToggle }) => {
   let shouldViewHeader =
     location.pathname !== "/extra/404" &&
-      location.pathname !== "/extra/500" &&
-      location.pathname !== "/extra/login" &&
-      location.pathname !== "/extra/register" &&
-      location.pathname !== "/extra/lock_screen"
+    location.pathname !== "/extra/500" &&
+    location.pathname !== "/extra/login" &&
+    location.pathname !== "/extra/register" &&
+    location.pathname !== "/extra/lock_screen"
       ? true
       : false;
 
@@ -20,29 +20,11 @@ const Component = ({ location, inboxHeader, openMobileToggle }) => {
   );
 
   return (
-    // <div
-    //   className={`header ${
-    //     sideBarStatus && location.pathname !== "/" ? "headerAlign" : ""
-    //   } relative`}
-    //   style={
-    //     shouldViewHeader
-    //       ? location.pathname === "/google_map"
-    //         ? { backgroundColor: "transparent" }
-    //         : {}
-    //       : { display: "none" }
-    //   }
-    // >
-    //   {location.pathname === "/boxed_layout" ? (
-    //     <div className="container">
-    //       <div className="header-inner">
-    //         <HeaderContent location={location} inboxHeader={inboxHeader} />
-    //       </div>
-    //     </div>
-    //   ) : (
-    //     <HeaderContent location={location} inboxHeader={inboxHeader} />
-    //   )}
-    // </div>
-    <HeaderContent location={location} inboxHeader={inboxHeader} openMobileToggle={openMobileToggle} />
+    <HeaderContent
+      location={location}
+      inboxHeader={inboxHeader}
+      openMobileToggle={openMobileToggle}
+    />
   );
 };
 

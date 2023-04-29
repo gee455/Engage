@@ -6,7 +6,7 @@ const ManageNote = (props) => {
         <div className="toolbar clearfix">
             <ul className="pull-right ">
                 <li>
-                    <a href="#" 
+                    <a href="javascript:void(0);" 
                         onClick={() => {
                             props.readyTrash()
                             setIsActiveTrash(prevState => !prevState)
@@ -17,7 +17,7 @@ const ManageNote = (props) => {
                     </a>
                 </li>
                 <li>
-                    <a href="#" onClick={() => props.onAdd()} className="new-note-link" data-navigate="view" data-view-port="#note-views" 
+                    <a href="javascript:void(0);" onClick={() => props.onAdd()} className="new-note-link" data-navigate="view" data-view-port="#note-views" 
                         data-view-animation="push">
                             <i className="pg-icon">add</i>
                     </a>

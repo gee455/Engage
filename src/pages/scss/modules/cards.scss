@@ -12,6 +12,7 @@
   width: 100%;
   word-wrap: none;
   background: $color-contrast-lowest;
+
   .card-header {
     background: transparent;
     border-radius: 0px;
@@ -24,8 +25,8 @@
       content: "";
       height: 1px;
       background: rgba(0, 0, 0, 0.08);
-      @include left( 16px );
-      @include right( 16px );
+      @include left(16px);
+      @include right(16px);
       position: absolute;
       bottom: 0;
     }
@@ -55,7 +56,7 @@
         margin: 0;
         padding: 0;
         li {
-          @include padding-left( 0px );
+          @include padding-left(0px);
           display: inline-block;
           list-style: none;
           line-height: 0;
@@ -217,8 +218,8 @@
     //overflow-y: auto;
     &.no-padding {
       .row {
-        @include margin-left( 0 );
-        @include margin-right( 0 );
+        @include margin-left(0);
+        @include margin-right(0);
       }
     }
     &.no-bottom-padding {
@@ -242,9 +243,9 @@
 .card-progress {
   background: rgba(255, 255, 255, 0.8);
   bottom: 0;
-  @include left( 0 );
+  @include left(0);
   position: absolute !important;
-  @include right( 0 );
+  @include right(0);
   top: 0;
   display: none;
   z-index: 2;
@@ -256,7 +257,7 @@
 .card-progress > .progress-circle-indeterminate,
 .card-progress > .card-bar-indeterminate {
   display: block;
-  @include left( 50% );
+  @include left(50%);
   @include margin-left(-17px);
   margin-top: -17px;
   position: absolute;
@@ -271,7 +272,7 @@
   @include left($layout-sidepanel-width);
   top: $layout-header-height - 1px;
   bottom: 0;
-  @include right( 0 );
+  @include right(0);
   z-index: $zIndex-portlet;
   margin: 0;
   width: auto;

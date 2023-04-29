@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 const Component = ({
-  url = '',
+  url = "",
   title,
   subTitle,
   icon,
   iconWrapperClass,
   topMargin,
   children,
+  subMenuItem,
   ...props
 }) => {
   return (
@@ -18,13 +19,17 @@ const Component = ({
         exact
         to={url}
         {...props}
-        className='detailed'
+        className="detailed"
         activeStyle={{
-          color: '#ffffff',
+          color: "#ffffff",
         }}
       >
-        <span className='title'>{title}</span>
-        <span className='details'>{subTitle}</span>
+        <span
+          className={subTitle || subMenuItem ? "title" : "title line-height-40"}
+        >
+          {title}
+        </span>
+        {subTitle && <span className="details">{subTitle}</span>}
       </NavLink>
       <span className={`${iconWrapperClass} icon-thumbnail`}>{icon}</span>
       {children}

@@ -1,13 +1,8 @@
 const persons = [
-    "Jim",
-    "John",
-    "Lucy",
-    "Mike",
-    "Sara",
-    "Daniel",
-    "Silva",
-    "Kate",
-    "Joan"
+
+	{ value: 'Jim', label: 'Jim' },
+    { value: 'John', label: 'John' },
+    { value: 'Lucy', label: 'Lucy' }
 ]
 
 export default persons;

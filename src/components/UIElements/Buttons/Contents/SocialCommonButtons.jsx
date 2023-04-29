@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap';
 
-import Button from '../../Button';
+import Button from '../../Button/UtilsButton';
 
 const SocialCommonButtons = () => {
     return (

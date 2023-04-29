@@ -21,7 +21,7 @@ const NoteDetail = (props) => {
             <ul className="toolbar">
                 <li>
                     <a 
-                        href="#" 
+                        href="javascript:void(0);" 
                         onClick={() => { 
                             let updateNote = note
                             if(props.newContent.id !== undefined && props.newContent.id !== "" && props.newContent.id !== null){
@@ -41,13 +41,13 @@ const NoteDetail = (props) => {
                             <i className="pg-icon">chevron_left</i>
                     </a>
                 </li>
-                <WYSIWYGItem cmd="bold" class="fa fa-bold"/>
-                <WYSIWYGItem cmd="italic" class="fa fa-italic"/>
+                <WYSIWYGItem cmd="bold" className="fa fa-bold fs-12"/>
+                <WYSIWYGItem cmd="italic" className="fa fa-italic fs-12"/>
                 <WYSIWYGItem 
                     cmd="createLink"
                     arg="https://ww.google.com"
                     name="hyperlink" 
-                    class="fa fa-link"
+                    className="fa fa-link fs-12"
                 />
             </ul>
             <div className="body">

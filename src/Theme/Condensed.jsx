@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import BootstrapTable from "react-bootstrap-table-next";
 
 import Dashboard from "../components/Theme-Condensed/Dashboard";
 import Social from "../components/Social";
@@ -8,12 +7,6 @@ import ComposeEmail from "../components/ComposeEmail";
 import Cards from "../components/Card";
 import Views from "../components/View";
 import Chart from "../components/Chart";
-
-import Calendar from "../components/Calendar/Basic";
-import CalendarLang from "../components/Calendar/Languages";
-import CalendarMonth from "../components/Calendar/Month";
-import CalendarLazy from "../components/Calendar/Lazyload";
-import CalendarDocs from "../components/Calendar/Documentation";
 
 import Builder from "../components/Builder";
 
@@ -58,13 +51,18 @@ import MenuLevelOne from "../components/MenuLevel/LevelOne";
 import Submenu from "../components/MenuLevel/LevelTwo/Submenu";
 
 import Header from "../components/Theme-Condensed/Header";
-import Sidebar from '../components/Theme-Condensed/Sidebar'
-import Search from '../components/Search'
+import Sidebar from "../components/Theme-Condensed/Sidebar";
+import Search from "../components/Theme-Condensed/Search";
 import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const Condensed = ({ location }) => {
-
+  if (
+    window.location.pathname.includes("condensed") ||
+    window.location.pathname === "/"
+  ) {
+    require("../pages/scss/themes/condensed/condensed.scss");
+  }
   let path = location.pathname;
   const [toggleInboxHeader, setToggleInboxHeader] = useState(false);
 
@@ -72,35 +70,51 @@ const Condensed = ({ location }) => {
     window.addEventListener("resize", (e) => {
       setToggleInboxHeader(false);
     });
+
     return () => window.removeEventListener("resize", null);
   });
 
+  if (path.includes("/cards")) {
+    document.body.classList.add("cards-view-page");
+  }
+  else{
+	document.body.classList.remove("cards-view-page");
+  }
+
   return (
-    <div>
-      {(path.includes('/condensed') || path === "/") &&
-        !path.includes('boxed_layout') &&
+    <div className="h-100">
+      {(path.includes("/condensed") || path === "/") &&
+        !path.includes("boxed_layout") &&
         !path.includes("/login") &&
         !path.includes("/register") &&
         !path.includes("/lock_screen") &&
         !path.includes("/404") &&
-        !path.includes("/500") &&
-        <div>
-          <Header location={location} inboxHeader={toggleInboxHeader} setInboxHeader={(value) => setToggleInboxHeader(value)} />
-          <Sidebar location={location} />
-        </div>}
-      {/* <Route exact={true} path="/" component={Dashboard} />
+        !path.includes("/500") && (
+          <div>
+            <Header
+              location={location}
+              inboxHeader={toggleInboxHeader}
+              setInboxHeader={(value) => setToggleInboxHeader(value)}
+            />
+            <Sidebar location={location} />
+          </div>
+        )}
+      <Route exact={true} path="/" component={Dashboard} />
       <Route exact={true} path="/condensed" component={Dashboard} />
-      <Route path="/condensed/dashboard" component={Dashboard} /> */}
+      <Route path="/condensed/dashboard" component={Dashboard} />
       <Route path="/condensed/social" component={Social} />
-      <Route path="/condensed/email" render={() => <Email inboxHeader={toggleInboxHeader} location={location} />} />
-      <Route path="/condensed/compose_email" render={() => <ComposeEmail inboxHeader={toggleInboxHeader} location={location} />} />
-      {/* START Calendar group routes */}
-      <Route path="/condensed/calendar/basic" component={Calendar} />
-      <Route path="/condensed/calendar/languages" component={CalendarLang} />
-      <Route path="/condensed/calendar/Month" component={CalendarMonth} />
-      <Route path="/condensed/calendar/lazyload" component={CalendarLazy} />
-      <Route path="/condensed/calendar_docs" component={CalendarDocs} />
-      {/* END Calendar routes */}
+      <Route
+        path="/condensed/email"
+        render={() => (
+          <Email inboxHeader={toggleInboxHeader} location={location} />
+        )}
+      />
+      <Route
+        path="/condensed/compose_email"
+        render={() => (
+          <ComposeEmail inboxHeader={toggleInboxHeader} location={location} />
+        )}
+      />
 
       {/* START Builder route */}
       <Route path="/condensed/builder" component={Builder} />
@@ -120,8 +134,14 @@ const Condensed = ({ location }) => {
       <Route path="/condensed/buttons" component={UIElementsButtons} />
       <Route path="/condensed/notifications" component={UIElementsNotify} />
       <Route path="/condensed/modals" component={UIElementsModal} />
-      <Route path="/condensed/progress" component={UIElementsProgressActivity} />
-      <Route path="/condensed/tabs_accordian" component={UIElementsTabsAccordion} />
+      <Route
+        path="/condensed/progress"
+        component={UIElementsProgressActivity}
+      />
+      <Route
+        path="/condensed/tabs_accordian"
+        component={UIElementsTabsAccordion}
+      />
       <Route path="/condensed/sliders" component={UIElementsSliders} />
       <Route path="/condensed/tree_view" component={UIElementsTreeView} />
       <Route path="/condensed/nestables" component={UIElementsNestables} />
@@ -165,11 +185,7 @@ const Condensed = ({ location }) => {
       <Route path="/condensed/submenu" component={Submenu} />
       {/* END Menu Levels routes */}
 
-      {/* <Route path="docs" component={}/>
-        <Route path="change_log" component={}/> */}
-
-      {/* <Quickview /> */}
-      <Search />
+      {(path.includes("/condensed") || path === "/") && <Search />}
     </div>
   );
 };

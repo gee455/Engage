@@ -32,7 +32,7 @@ const NuttonColor = () => {
                                             <div>
                                                 <p className="m-t-0 bold m-b-5">Pages Color Matrix</p>
                                                 <p className="m-b-5">See how pages color system adapts different states and...</p>
-                                                <a href="" className="m-b-5 fs-12">Related Link</a>
+                                                <a href="javascript:void(0);" className="m-b-5 fs-12">Related Link</a>
                                             </div>
                                         </div>
                                     </div>

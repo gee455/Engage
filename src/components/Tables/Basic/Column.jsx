@@ -3,8 +3,8 @@ import React from 'react';
 function placeFormatter(cell, row, rowIndex, formatExtraData) {
     return (
         <React.Fragment>
-            <a href="#" onClick={(e) => e.preventDefault()} className="btn">United States</a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="btn">Africa</a>
+            <a href="javascript:void(0);" onClick={(e) => e.preventDefault()} className="btn">United States</a>
+            <a href="javascript:void(0);" onClick={(e) => e.preventDefault()} className="btn">Africa</a>
         </React.Fragment>
     );
 }

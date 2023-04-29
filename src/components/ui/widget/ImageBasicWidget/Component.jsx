@@ -6,7 +6,7 @@ const Component = () => {
             <div className="panel-heading">
                 <div className="panel-controls">
                 <ul>
-                    <li><a href="#" className="portlet-refresh" data-toggle="refresh"><i
+                    <li><a href="javascript:void(0);" className="portlet-refresh" data-toggle="refresh"><i
                 className="portlet-icon portlet-icon-refresh-lg-white"></i></a>
                     </li>
                 </ul>

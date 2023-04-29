@@ -9,6 +9,10 @@ const content = () => {
             <div className="content sm-gutter">
                 { /* START CONTAINER FLUID */ }
                 <div className="container-fluid padding-25 sm-padding-10">
+				<br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<br /><br />
                 </div>
                 { /* END CONTAINER FLUID */ }
             </div>

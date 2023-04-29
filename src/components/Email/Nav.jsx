@@ -31,29 +31,29 @@ const Nav = ({to, toggleHeaderPopup}) => {
                         </Link>
                     </li>
                 <li className="">
-                    <a href="#">
+                    <a href="javascript:void(0);">
                         <span className="title"><i className="pg-icon">inbox_all</i> All mail</span>
                     </a>
                     <ul id="email-secondary-sidebar-id" className="sub-menu no-padding">
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 <span className="title">Important</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 <span className="title">Labeled</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="javascript:void(0);">
                         <span className="title"><i className="pg-icon">sent</i> Sent</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="javascript:void(0);">
                         <span className="title"><i className="pg-icon">spam</i> Spam</span>
                         <span className="badge pull-right">10</span>
                     </a>
@@ -62,18 +62,18 @@ const Nav = ({to, toggleHeaderPopup}) => {
             <p className="menu-title m-t-20 all-caps">Quick view</p>
             <ul id="email-quick-view-secondary-sidebar-id" className="sub-menu no-padding">
                 <li>
-                    <a href="#">
+                    <a href="javascript:void(0);">
                         <span className="title">Documents</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="javascript:void(0);">
                         <span className="title">Flagged</span>
                         <span className="badge pull-right">5</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="javascript:void(0);">
                         <span className="title">Images</span>
                     </a>
                 </li>

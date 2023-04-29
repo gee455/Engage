@@ -12,7 +12,7 @@ const WYSIWYGItem = (props) => {
                 document.execCommand(props.cmd, false, props.arg);
                 setButton(!button)
             }}
-            ><i className={`${props.class}`}></i></a>
+            ><i className={`${props.className}`}></i></a>
         </li>
     )
 }

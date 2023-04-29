@@ -1,8 +1,8 @@
 export const colourOptions = [
-    { value: 'ocean', label: 'Ocean', color: '#00B8D9', isFixed: true },
-    { value: 'blue', label: 'Blue', color: '#0052CC', isDisabled: true },
+    { value: 'ocean', label: 'Ocean', color: '#00B8D9'},
+    { value: 'blue', label: 'Blue', color: '#0052CC'},
     { value: 'purple', label: 'Purple', color: '#5243AA' },
-    { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
+    { value: 'red', label: 'Red', color: '#FF5630' },
     { value: 'orange', label: 'Orange', color: '#FF8B00' },
     { value: 'yellow', label: 'Yellow', color: '#FFC400' },
     { value: 'green', label: 'Green', color: '#36B37E' },
@@ -118,3 +118,61 @@ export const colourOptions = [
     { value: '2', label: 'Payment details' },
     { value: '3', label: 'Done summary' }
   ];
+
+  export const alaskanOptions = [
+	{value: 'AK',label: 'Alaska' },
+    {value: 'HW',label: 'Hawaii' }
+  ]
+  export const pacificOptions = [
+	{value: 'CL',label: 'California' },
+	{value: 'NV',label: 'Nevada' },
+	{value: 'OR',label: 'Oregon' },
+	{value: 'WT',label: 'Washington' }
+  ]
+
+  export const mountainOptions = [
+	{value: 'AR',label: 'Arizona' },
+	{value: 'CL',label: 'Colorado' },
+	{value: 'ID',label: 'Idaho' },
+	{value: 'MT',label: 'Montana' },
+	{value: 'NB',label: 'Nebraska' },
+	{value: 'NM',label: 'New Mexico' },
+	{value: 'ND',label: 'North Dakota' },
+	{value: 'UT',label: 'Utah' },
+	{value: 'WY',label: 'Wyoming' }
+  ]
+
+  export const centralOptions = [
+	{ value: 'AL', label: 'Alabama' },
+	{ value: 'AR', label: 'Arkansas' },
+	{ value: 'IL', label: 'Illinois' },
+	{ value: 'IA', label: 'Iowa' },
+    { value: 'KS', label: 'Kansas' },
+    { value: 'KY', label: 'Kentucky' },
+	{ value: 'LA', label: 'Louisiana' },
+	{ value: 'MN', label: 'Minnesota' },
+    { value: 'MS', label: 'Mississippi' },
+	{ value: 'MO', label: 'Missouri' },
+
+  ]
+
+  export const timezonegroupedOptions = [
+    {
+      label: 'Alaskan/Hawaiian Time Zone',
+      options: alaskanOptions,
+    },
+    {
+      label: 'Pacific Time Zone',
+      options: pacificOptions,
+    },
+	{
+	  label: 'Mountain Time Zone',
+	  options: mountainOptions,
+	},
+	{
+	  label: 'Central Time Zone',
+      options: centralOptions,
+	},
+  ];
+
+  

@@ -103,7 +103,7 @@ const Component = () => {
             <div className="panel-heading pull-top top-right">
                 <div className="panel-controls">
                 <ul>
-                    <li><a data-toggle="refresh" className="portlet-refresh text-black" href="#"><i
+                    <li><a data-toggle="refresh" className="portlet-refresh text-black" href="javascript:void(0);"><i
                 className="portlet-icon portlet-icon-refresh"></i></a>
                     </li>
                 </ul>

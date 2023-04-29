@@ -27,7 +27,7 @@ const NotificationList = (props) => {
 								<div className="notification-item unread clearfix">
 									{/* START Notification Item*/}
 									<div className="heading open">
-										<a href="#" className="text-complete pull-left">
+										<a href="javascript:void(0);" className="text-complete pull-left">
 											<i className="pg-map fs-16 m-r-10"></i>
 											<span className="bold">Carrot Design</span>
 											<span className="fs-12 m-l-10">David Nester</span>
@@ -61,7 +61,7 @@ const NotificationList = (props) => {
 										data-placement="left"
 										title="mark as read"
 									>
-										<a href="#" className="mark"></a>
+										<a href="javascript:void(0);" className="mark"></a>
 									</div>
 									{/* END Notification Item Right Side*/}
 								</div>
@@ -69,7 +69,7 @@ const NotificationList = (props) => {
 								{/* START Notification Item*/}
 								<div className="notification-item  clearfix">
 									<div className="heading">
-										<a href="#" className="text-danger pull-left">
+										<a href="javascript:void(0);" className="text-danger pull-left">
 											<i className="fa fa-exclamation-triangle m-r-10"></i>
 											<span className="bold">98% Server Load</span>
 											<span className="fs-12 m-l-10">Take Action</span>
@@ -78,7 +78,7 @@ const NotificationList = (props) => {
 									</div>
 									{/* START Notification Item Right Side*/}
 									<div className="option">
-										<a href="#" className="mark"></a>
+										<a href="javascript:void(0);" className="mark"></a>
 									</div>
 									{/* END Notification Item Right Side*/}
 								</div>
@@ -86,7 +86,7 @@ const NotificationList = (props) => {
 								{/* START Notification Item*/}
 								<div className="notification-item  clearfix">
 									<div className="heading">
-										<a href="#" className="text-warning-dark pull-left">
+										<a href="javascript:void(0);" className="text-warning-dark pull-left">
 											<i className="fa fa-exclamation-triangle m-r-10"></i>
 											<span className="bold">Warning Notification</span>
 											<span className="fs-12 m-l-10">Buy Now</span>
@@ -95,7 +95,7 @@ const NotificationList = (props) => {
 									</div>
 									{/* START Notification Item Right Side*/}
 									<div className="option">
-										<a href="#" className="mark"></a>
+										<a href="javascript:void(0);" className="mark"></a>
 									</div>
 									{/* END Notification Item Right Side*/}
 								</div>
@@ -113,7 +113,7 @@ const NotificationList = (props) => {
 												src="../assets/img/profiles/1.jpg"
 											/>
 										</div>
-										<a href="#" className="text-complete pull-left">
+										<a href="javascript:void(0);" className="text-complete pull-left">
 											<span className="bold">Revox Design Labs</span>
 											<span className="fs-12 m-l-10">Owners</span>
 										</a>
@@ -126,7 +126,7 @@ const NotificationList = (props) => {
 										data-placement="left"
 										title="mark as read"
 									>
-										<a href="#" className="mark"></a>
+										<a href="javascript:void(0);" className="mark"></a>
 									</div>
 									{/* END Notification Item Right Side*/}
 								</div>
@@ -135,13 +135,13 @@ const NotificationList = (props) => {
 							{/* END Notification Body*/}
 							{/* START Notification Footer*/}
 							<div className="notification-footer text-center">
-								<a href="#" className="">
+								<a href="javascript:void(0);" className="">
 									Read all notifications
 								</a>
 								<a
 									data-toggle="refresh"
 									className="portlet-refresh text-black pull-right"
-									href="#"
+									href="javascript:void(0);"
 								>
 									<i className="pg-refresh_new"></i>
 								</a>
@@ -154,10 +154,10 @@ const NotificationList = (props) => {
 				</div>
 			</li>
 			<li className="p-r-15 inline">
-				<a href="#" className="icon-set clip "></a>
+				<a href="javascript:void(0);" className="icon-set clip "></a>
 			</li>
 			<li className="p-r-15 inline">
-				<a href="#" className="icon-set grid-box"></a>
+				<a href="javascript:void(0);" className="icon-set grid-box"></a>
 			</li>
 		</ul>
 	);

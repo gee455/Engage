@@ -104,6 +104,25 @@
   }
 }
 
+// error pages
+.error-container {
+    margin-top: -100px !important;
+    // width: 38% !important;
+}
+.error-number {
+    font-family: Montserrat;
+    font-size: 90px;
+    line-height: 90px;
+}
+.error-container-innner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px !important;
+}
+.full-height-extra {
+	height: 100vh;
+  }
+  
 /* Profile dropdown
 ------------------------------------
 */
@@ -686,4 +705,8 @@
   .d-flex {
     -ms-flex-wrap: wrap;
   }
+}
+
+.input-search-text{
+	padding-left: 16px;
 }

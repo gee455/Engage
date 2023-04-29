@@ -15,11 +15,11 @@ const Content = (props) => {
             { /* END List Group Header*/ }
             <ul>
                 { /* BEGIN List Group Item*/ }
-                {/* <WithLinkAlertGroupItem 
+                <WithLinkAlertGroupItem 
                     indicatorClass={props.indicatorClass}
                     linkText={props.linkText}
                     masterText={props.masterText}
-                /> */}
+                />
                 { /* END List Group Item*/ }
                 { /* BEGIN List Group Item*/ }
                 <WithLinkAlertGroupItem 

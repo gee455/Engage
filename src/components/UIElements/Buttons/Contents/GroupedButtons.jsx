@@ -16,10 +16,10 @@ const GroupedButtons = () => {
                     <div className="card-header ">
                         <div className="card-title">Single Button Group</div>
                         <div className="tools">
-                            <a href="" className="collapse" onClick={(e)=>e.preventDefault()}></a>
+                            <a href="javascript:void(0);" className="collapse" onClick={(e)=>e.preventDefault()}></a>
                             <a href="#grid-config" data-toggle="modal" className="config"></a>
-                            <a href="" className="reload" onClick={(e)=>e.preventDefault()}></a>
-                            <a href="" className="remove" onClick={(e)=>e.preventDefault()}></a>
+                            <a href="javascript:void(0);" className="reload" onClick={(e)=>e.preventDefault()}></a>
+                            <a href="javascript:void(0);" className="remove" onClick={(e)=>e.preventDefault()}></a>
                         </div>
                     </div>
                     <div className="card-body">
@@ -55,10 +55,10 @@ const GroupedButtons = () => {
                     <div className="card-header ">
                         <div className="card-title">Button toolbar</div>
                         <div className="tools">
-                            <a href="" className="collapse" onClick={(e)=>e.preventDefault()}></a>
+                            <a href="javascript:void(0);" className="collapse" onClick={(e)=>e.preventDefault()}></a>
                             <a href="#grid-config" data-toggle="modal" className="config"></a>
-                            <a href="" className="reload" onClick={(e)=>e.preventDefault()}></a>
-                            <a href="" className="remove" onClick={(e)=>e.preventDefault()}></a>
+                            <a href="javascript:void(0);" className="reload" onClick={(e)=>e.preventDefault()}></a>
+                            <a href="javascript:void(0);" className="remove" onClick={(e)=>e.preventDefault()}></a>
                         </div>
                     </div>
                     <div className="card-body">
@@ -168,8 +168,8 @@ const GroupedButtons = () => {
                                     style={sizeOptionDropDown 
                                         ? {width: '130px', willChange: 'transform', position: 'absolute', transform: 'translate3d(0px, 28px, 0px)', top: '0px', left: '0px'} 
                                         : {}}>
-                                    <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Sharp Grotesk</a>
-                                    <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Helvetica </a>
+                                    <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Sharp Grotesk</a>
+                                    <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Helvetica </a>
                                 </div>
                             </div>
                         </div>
@@ -212,9 +212,9 @@ const GroupedButtons = () => {
                                         style={verticalDefaultDropDown 
                                             ? {width: '85px', willChange: 'transform', position: 'absolute', transform: 'translate3d(0px, 28px, 0px)', top: '0px', left: '0px'} 
                                             : {}}>
-                                        <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Action</a>
-                                        <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Helvetica </a>
-                                        <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>SegeoUI</a>
+                                        <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Action</a>
+                                        <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Helvetica </a>
+                                        <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>SegeoUI</a>
                                     </div>
                                 </div>
                             </div>

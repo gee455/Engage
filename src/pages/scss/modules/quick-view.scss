@@ -24,7 +24,7 @@
     position: absolute;
     @include right(8px);
     top: 7px;
-    color: $color-menu-light;
+    color: $color-menu-light !important;
     padding: 0;
     line-height: 0;
     &:hover:not(.active) {
@@ -131,6 +131,7 @@
               background: transparent;
               bottom: 8px;
               display: block;
+			  top: auto;
               @include left(50%);
               @include margin-left(-40%);
               position: absolute;

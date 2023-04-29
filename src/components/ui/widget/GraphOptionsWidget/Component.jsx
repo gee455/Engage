@@ -12,7 +12,7 @@ const Component = () => {
             </div>
             <div className="panel-controls">
                 <ul>
-                <li><a href="#" className="portlet-refresh text-black" data-toggle="refresh"><i
+                <li><a href="javascript:void(0);" className="portlet-refresh text-black" data-toggle="refresh"><i
                     className="portlet-icon portlet-icon-refresh"></i></a>
                 </li>
                 </ul>
@@ -64,7 +64,7 @@ const Component = () => {
             </div>
             <div className="p-l-20 p-r-20 p-t-10 p-b-10 ">
             <p className="pull-left no-margin hint-text">Super secret options</p>
-            <a href="#" className="pull-right"><i className="fa fa-arrow-circle-o-down text-success fs-16"></i></a>
+            <a href="javascript:void(0);" className="pull-right"><i className="fa fa-arrow-circle-o-down text-success fs-16"></i></a>
             <div className="clearfix"></div>
             </div>
         </div>

@@ -7,7 +7,7 @@ const ChatHeader = (props) => {
         <div className="navbar navbar-default">
             <div className="navbar-inner">
                 { /* BEGIN Header Controler */ }
-                <a href="#" className="action p-l-10 link text-color" data-navigate="view" 
+                <a href="javascript:void(0);" className="action p-l-10 link text-color" data-navigate="view" 
                     data-view-port="#chat" data-view-animation="push-parrallax"
                     onClick={(e) => e.preventDefault()}
                 >
@@ -19,7 +19,7 @@ const ChatHeader = (props) => {
                 <div className="fs-11">{props.show}</div>
                 </div>
                 { /* BEGIN Header Controler */ }
-                <a href="#" className="action p-r-10 pull-right link text-color">
+                <a href="javascript:void(0);" className="action p-r-10 pull-right link text-color">
                     <i className="pg-icon">more_horizontal</i>
                 </a>
                 { /* END Header Controler */ }

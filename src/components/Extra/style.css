@@ -1,3 +1,13 @@
-.full-height-extra{
-    height: 80vh;
+.error-container {
+  margin-top: 0 !important;
+  width: 100% !important;
 }
+
+.error-container-innner {
+  width: 100% !important;
+}
+
+.error-page {
+  padding: 15px;
+}
+

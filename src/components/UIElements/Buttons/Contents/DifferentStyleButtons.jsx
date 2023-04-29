@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Row, Col } from 'reactstrap';
 
 import Button from '../../Button';
+import UtilsButton from '../../Button/UtilsButton';
 
 import './style.css';
 
@@ -34,9 +35,9 @@ const DifferentStyleButtons = () => {
                                 style={downDirectionDropDown 
                                     ? {width: '85px', willChange: 'transform', position: 'absolute', transform: 'translate3d(0px, 28px, 0px)', top: '0px', left: '0px'} 
                                     : {}}>
-                                <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Action</a>
-                                <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Helvetica </a>
-                                <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>SegeoUI</a>
+                                <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Action</a>
+                                <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Helvetica </a>
+                                <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>SegeoUI</a>
                             </div>
                         </div>
                         <br/>
@@ -52,9 +53,9 @@ const DifferentStyleButtons = () => {
                                 style={upDirectionDropDown 
                                     ? {width: '85px', willChange: 'transform', position: 'absolute', transform: 'translate3d(0px, -89px, 0px)', top: '0px', left: '0px'} 
                                     : {}}>
-                                <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Action</a>
-                                <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>Helvetica </a>
-                                <a className="dropdown-item" href="" onClick={(e)=>e.preventDefault()}>SegeoUI</a>
+                                <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Action</a>
+                                <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>Helvetica </a>
+                                <a className="dropdown-item" href="javascript:void(0);" onClick={(e)=>e.preventDefault()}>SegeoUI</a>
                             </div>
                         </div>
                         <br/>
@@ -75,36 +76,36 @@ const DifferentStyleButtons = () => {
                     <div className="card-body">
                         <p>Tags and Chips are compact elements that represent an input, attribute, or action.</p>
                         <br/>
-                        <Button aria-label="" type="tag" size="xs" utilclass="btn btn-tag btn-xs m-r-5">Photography</Button>
-                        <Button aria-label="" utilclass="btn btn-tag btn-xs m-r-5">Art</Button>
+                        <UtilsButton aria-label="" type="tag" size="xs" utilclass="btn btn-tag btn-xs m-r-5">Photography</UtilsButton>
+                        <UtilsButton aria-label="" utilclass="btn btn-tag btn-xs m-r-5">Art</UtilsButton>
                         <br/>
                         <br/>
-                        <Button aria-label="" type="chip" size="xs" active="true" utilclass="m-r-5 m-b-10">
+                        <UtilsButton aria-label="" type="chip" size="xs" active="true" utilclass="m-r-5 m-b-10">
                             <i className="pg-icon">tick</i>
                             Tops
-                        </Button>
-                        <Button aria-label="" type="chip" size="xs" utilclass="m-r-5 m-b-10">
+                        </UtilsButton>
+                        <UtilsButton aria-label="" type="chip" size="xs" utilclass="m-r-5 m-b-10">
                             <i className="pg-icon">tick</i>
                             Bottoms
-                        </Button>
-                        <Button aria-label="" type="chip" size="xs" utilclass="m-b-10">
+                        </UtilsButton>
+                        <UtilsButton aria-label="" type="chip" size="xs" utilclass="m-b-10">
                             <i className="pg-icon">tick</i>
                             Shoes
-                        </Button>
+                        </UtilsButton>
                         <br/>
                         <br/>
-                        <Button aria-label="" type="chip" size="xs" utilclass="m-r-5 m-b-10">
+                        <UtilsButton aria-label="" type="chip" size="xs" utilclass="m-r-5 m-b-10">
                             <i className="pg-icon">tick</i>
                             Small
-                        </Button>
-                        <Button aria-label="" type="chip" active="true" utilclass="m-r-5 m-b-10">
+                        </UtilsButton>
+                        <UtilsButton aria-label="" type="chip" active="true" utilclass="m-r-5 m-b-10">
                             <i className="pg-icon">tick</i>
                             Medium
-                        </Button>
-                        <Button aria-label="" type="chip" size="lg" utilclass="m-b-10">
+                        </UtilsButton>
+                        <UtilsButton aria-label="" type="chip" size="lg" utilclass="m-b-10">
                             <i className="pg-icon">tick</i>
                             Large
-                        </Button>
+                        </UtilsButton>
                         <p className="small m-t-10">Chips allow users to enter information, make selections, filter content, or
                             trigger actions. While buttons are expected to appear consistently and with familiar calls to action,
                             chips should appear dynamically as a group of multiple interactive elements.</p>
@@ -122,14 +123,14 @@ const DifferentStyleButtons = () => {
                     <div className="card-body">
                         <p>A button can be circular:</p>
                         <br/>
-                        <Button type="default" size="lg"  roundbutton="true" utilclass="m-r-20 m-b-10">Big rounded</Button>
-                        <Button type="primary" size="lg" roundbutton="true" utilclass="m-r-20 m-b-10">Big rounded</Button>
+                        <UtilsButton type="default" size="lg"  roundbutton="true" utilclass="m-r-20 m-b-10">Big rounded</UtilsButton>
+                        <UtilsButton type="primary" size="lg" roundbutton="true" utilclass="m-r-20 m-b-10">Big rounded</UtilsButton>
                         <br/>
-                        <Button type="default" roundbutton="true" utilclass="m-r-20 m-b-10">Rounded</Button>
-                        <Button type="primary" roundbutton="true" utilclass="m-b-10">Rounded</Button>
+                        <UtilsButton type="default" roundbutton="true" utilclass="m-r-20 m-b-10">Rounded</UtilsButton>
+                        <UtilsButton type="primary" roundbutton="true" utilclass="m-b-10">Rounded</UtilsButton>
                         <br/>
-                        <Button type="default" size="sm" roundbutton="true" utilclass="m-r-20">Link me</Button>
-                        <Button type="primary" size="sm" roundbutton="true">Link me</Button>
+                        <UtilsButton type="default" size="sm" roundbutton="true" utilclass="m-r-20">Link me</UtilsButton>
+                        <UtilsButton type="primary" size="sm" roundbutton="true">Link me</UtilsButton>
                         <br/>
                         <br/>
                         <p className="small">Circular buttons are a special type of promoted action. It Distinguish a different action

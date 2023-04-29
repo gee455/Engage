@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import HeaderContent from "./Content";
 
-import "./style.css";
+import "./style.scss";
 
 const Component = ({ location, inboxHeader, openMobileToggle }) => {
 	let shouldViewHeader =

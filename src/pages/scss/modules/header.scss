@@ -197,6 +197,10 @@
   }
 }
 
+.menu-behind img.header-logo{
+	margin-left: 0px !important;
+}
+
 /* Header Responsive Classes
 ------------------------------------
 */
@@ -324,3 +328,36 @@
     font-size: 15px;
   }
 }
+
+
+.ui-elements-dropdown {
+	animation: fadein 0.4s ;
+}
+.forms-dropdown {
+	animation: fadein 0.4s ;
+}
+.more-dropdown{
+	animation: fadein 0.4s ;
+}
+
+@keyframes slideDown {
+	0% { 
+	  opacity: 0;
+	  transform: translateY(-30%);
+	}
+  
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+}
+
+
+@keyframes fadein {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }

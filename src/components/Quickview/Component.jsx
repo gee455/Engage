@@ -6,7 +6,7 @@ import Alerts from './Alert/Component';
 import Chat from './Chat/Component';
 import Note from './Note/Component';
 import NavClose from './NavClose';
-import './style.css';
+import './style.scss';
 class Component extends React.Component {
 
   constructor(props) {
@@ -33,7 +33,7 @@ class Component extends React.Component {
       <div id="quickview" className={`quickview-wrapper chat ${this.props.openState ? 'open' : ''}`} data-pages="quickview">
         <ul className="nav nav-tabs" role="tablist">
           <li className="">
-            <a href="" data-target="#quickview-notes" data-toggle="tab" role="tab"
+            <a href="javascript:void(0);" data-target="#quickview-notes" data-toggle="tab" role="tab"
               className={`${this.state.activeTab === '1' ? 'active' : ''}`}
               aria-selected={`${this.state.activeTab === '1' ? 'true' : 'false'}`}
               onClick={(e) => {
@@ -43,7 +43,7 @@ class Component extends React.Component {
             >Notes</a>
           </li>
           <li>
-            <a href="" data-target="#quickview-alerts" data-toggle="tab" role="tab"
+            <a href="javascript:void(0);" data-target="#quickview-alerts" data-toggle="tab" role="tab"
               className={`${this.state.activeTab === '2' ? 'active' : ''}`}
               aria-selected={`${this.state.activeTab === '2' ? 'true' : 'false'}`}
               onClick={(e) => {
@@ -53,7 +53,7 @@ class Component extends React.Component {
             >Alerts</a>
           </li>
           <li className="">
-            <a href="" data-target="#quickview-chats" data-toggle="tab" role="tab"
+            <a href="javascript:void(0);" data-target="#quickview-chats" data-toggle="tab" role="tab"
               className={`${this.state.activeTab === '3' ? 'active' : ''}`}
               aria-selected={`${this.state.activeTab === '3' ? 'true' : 'false'}`}
               onClick={(e) => {

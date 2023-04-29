@@ -6,7 +6,7 @@ const WithLinkAlertGroupItem = (props) => {
     return (
         <li className="alert-list">
             { /* BEGIN Alert Item Set Animation using data-view-animation */ }
-            <a href="#" className="p-t-10 p-b-10 align-items-center" 
+            <a href="javascript:void(0);" className="p-t-10 p-b-10 align-items-center" 
                 data-navigate="view" data-view-port="#chat" 
                 data-view-animation="push-parrallax"
                 onClick={(e) => e.preventDefault()}

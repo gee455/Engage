@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Header from './Header';
 import ConvInput from './ConvInput';
 import MessageText from './MessageText';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 const Component = (props) => {
 
@@ -51,12 +52,12 @@ const Component = (props) => {
             <Header click={props.click}/>
             { /* END Header  */ }
             { /* BEGIN Conversation  */ }
-            <div className="chat-inner" id="my-conversation">
+            <PerfectScrollbar className="chat-inner" id="my-conversation">
                 {chatConvs}
                 {liveConvs.map((value, index) => {
                     return <MessageText from="self" message={value} key={index} />
                 })}
-            </div>
+            </PerfectScrollbar>
             { /* END Conversation  */ }
             { /* BEGIN Chat Input  */ }
             <ConvInput onSubmit={handleSetLiveChat} />

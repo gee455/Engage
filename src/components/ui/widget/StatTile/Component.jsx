@@ -14,7 +14,7 @@ const Component = () => {
                 </div>
                 <div className="panel-controls">
                     <ul>
-                    <li><a data-toggle="refresh" className="portlet-refresh text-black" href="#"><i
+                    <li><a data-toggle="refresh" className="portlet-refresh text-black" href="javascript:void(0);"><i
                     className="portlet-icon portlet-icon-refresh"></i></a>
                     </li>
                     </ul>
@@ -40,7 +40,7 @@ const Component = () => {
                     </Col>
                 </Row>
                 <div className="p-t-10 full-width">
-                    <a href="#" className="btn-circle-arrow b-grey"><i
+                    <a href="javascript:void(0);" className="btn-circle-arrow b-grey"><i
                 className="pg-arrow_minimize text-danger"></i></a>
                     <span className="hint-text small">Show more</span>
                 </div>

@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";
-import BootstrapTable from "react-bootstrap-table-next";
+import React, { useState, useEffect } from "react";
 
 import Dashboard from "../components/Theme-Simple/Dashboard";
 import Social from "../components/Social";
@@ -22,7 +21,7 @@ import LayoutsDefault from "../components/Layouts/Default";
 import LayoutsRtl from "../components/Layouts/Rtl";
 import LayoutsSecondary from "../components/Layouts/Secondary";
 
-import UIElementsColor from "../components/UIElements/Color";
+import UIElementsColor from "../components/Theme-Simple/Color";
 import UIElementstypography from "../components/UIElements/Typography";
 import UIElementsIcons from "../components/UIElements/Icons";
 import UIElementsButtons from "../components/UIElements/Buttons";
@@ -57,66 +56,83 @@ import ExtraTimeLine from "../components/Extra/TimeLine";
 import MenuLevelOne from "../components/MenuLevel/LevelOne";
 import Submenu from "../components/MenuLevel/LevelTwo/Submenu";
 
-import Search from '../components/Theme-Simple/Search'
+import Search from "../components/Theme-Simple/Search";
 import Header from "../components/Theme-Simple/Header";
-import Sidebar from '../components/Theme-Simple/SidebarSimple'
+import Sidebar from "../components/Theme-Simple/SidebarSimple";
 import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
-
-
 
 const Simple = ({ location }) => {
   let path = location.pathname;
   const [toggleInboxHeader, setToggleInboxHeader] = useState(false);
 
-	useEffect(() => {
-		window.addEventListener("resize", (e) => {
-			setToggleInboxHeader(false);
-		});
-		return () => window.removeEventListener("resize", null);
-	});
+  useEffect(() => {
+    window.addEventListener("resize", (e) => {
+      setToggleInboxHeader(false);
+    });
+    return () => window.removeEventListener("resize", null);
+  });
 
-  if (path.includes('/simple')) {
-    document.body.classList.remove('pace-done')
-    document.body.classList.add('mac');
-    document.body.classList.add('desktop');
-    document.body.classList.add('js-focus-visible');
-    document.body.classList.add('menu-unpinned');
-    document.body.classList.add('simple');
+  if (path.includes("/simple")) {
+    require("../pages/scss/themes/simpleTheme/simple.scss");
+    document.body.classList.remove("pace-done");
+    document.body.classList.add("mac");
+    document.body.classList.add("desktop");
+    document.body.classList.add("js-focus-visible");
+    document.body.classList.add("menu-unpinned");
+    document.body.classList.add("simple");
 
     const { innerWidth: width, innerHeight: height } = window;
-    width < 1200 && width > 991 ? document.body.classList.remove('menu-pin') : document.body.classList.add('menu-pin');
+    width < 1200 && width > 991
+      ? document.body.classList.remove("menu-pin")
+      : document.body.classList.add("menu-pin");
+  }
 
+  if (path.includes("/cards")) {
+    document.body.classList.add("cards-view-page");
+  }
+  else{
+	document.body.classList.remove("cards-view-page");
   }
 
   return (
-    <div>
-      {path.includes('/simple') &&
+    <div className="h-100">
+      {path.includes("/simple") &&
         !path.includes("/boxed_layout") &&
         !path.includes("/login") &&
         !path.includes("/register") &&
         !path.includes("/lock_screen") &&
         !path.includes("/404") &&
-        !path.includes("/500") &&
-        <div className="page-content-wrapper full-height">
-          <div className="content full-height"><Sidebar location={location} />
-          </div>
-        </div>}
+        !path.includes("/500") && <Sidebar location={location} />}
 
-      {
-        path.includes('/simple') &&
+      {path.includes("/simple") &&
         !path.includes("/boxed_layout") &&
         !path.includes("/login") &&
         !path.includes("/register") &&
         !path.includes("/lock_screen") &&
         !path.includes("/404") &&
-        !path.includes("/500") &&
-        <Header location={location} inboxHeader={toggleInboxHeader} setInboxHeader={(value)=>setToggleInboxHeader(value)}/>}
-      {/* <Route exact={true} path="/simple/" component={Dashboard} />
-      <Route path="/simple/dashboard" component={Dashboard} /> */}
+        !path.includes("/500") && (
+          <Header
+            location={location}
+            inboxHeader={toggleInboxHeader}
+            setInboxHeader={(value) => setToggleInboxHeader(value)}
+          />
+        )}
+      <Route exact={true} path="/simple/" component={Dashboard} />
+      <Route path="/simple/dashboard" component={Dashboard} />
       <Route path="/simple/social" component={Social} />
-      <Route path="/simple/email" render={()=><Email inboxHeader={toggleInboxHeader} location={location} />}/>
-      <Route path="/simple/compose_email" render={()=><ComposeEmail inboxHeader={toggleInboxHeader} location={location} />} />
+      <Route
+        path="/simple/email"
+        render={() => (
+          <Email inboxHeader={toggleInboxHeader} location={location} />
+        )}
+      />
+      <Route
+        path="/simple/compose_email"
+        render={() => (
+          <ComposeEmail inboxHeader={toggleInboxHeader} location={location} />
+        )}
+      />
       {/* START Calendar group routes */}
       <Route path="/simple/calendar/basic" component={Calendar} />
       <Route path="/simple/calendar/languages" component={CalendarLang} />
@@ -144,7 +160,10 @@ const Simple = ({ location }) => {
       <Route path="/simple/notifications" component={UIElementsNotify} />
       <Route path="/simple/modals" component={UIElementsModal} />
       <Route path="/simple/progress" component={UIElementsProgressActivity} />
-      <Route path="/simple/tabs_accordian" component={UIElementsTabsAccordion} />
+      <Route
+        path="/simple/tabs_accordian"
+        component={UIElementsTabsAccordion}
+      />
       <Route path="/simple/sliders" component={UIElementsSliders} />
       <Route path="/simple/tree_view" component={UIElementsTreeView} />
       <Route path="/simple/nestables" component={UIElementsNestables} />
@@ -192,7 +211,9 @@ const Simple = ({ location }) => {
         <Route path="/simplechange_log" component={}/> */}
 
       {/* {path.includes('/simple') && <Quickview />} */}
-      {path.includes('/simple') && !path.includes("/boxed_layout") && <Search />}
+      {path.includes("/simple") && !path.includes("/boxed_layout") && (
+        <Search />
+      )}
     </div>
   );
 };

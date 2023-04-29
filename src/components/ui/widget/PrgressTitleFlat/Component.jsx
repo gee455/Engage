@@ -14,7 +14,7 @@ const Component = () => {
                         </div>
                         <div className="panel-controls">
                         <ul>
-                            <li><a href="#" className="portlet-refresh text-black" data-toggle="refresh"><i
+                            <li><a href="javascript:void(0);" className="portlet-refresh text-black" data-toggle="refresh"><i
                                 className="portlet-icon portlet-icon-refresh"></i></a>
                             </li>
                         </ul>
@@ -26,7 +26,7 @@ const Component = () => {
                     <div className="col-xs-height col-top">
                     <div className="p-l-20 p-t-15">
                         <h3 className="no-margin p-b-5 text-white">$23,000</h3>
-                        <a href="#" className="btn-circle-arrow text-white"><i
+                        <a href="javascript:void(0);" className="btn-circle-arrow text-white"><i
                         className="pg-arrow_minimize"></i>
                 </a>
                         <span className="small hint-text">65% lower than last month</span>

@@ -40,49 +40,49 @@ $direction: ltr; // use `rtl` or `ltr
 @import "direction";
 
 // Color functions
-@import "color";
+// @import "color";
 
 // Mixins tools
 @import "mixins";
 
 // Import Vars
-@import "var";
+// @import "var";
 
 // Includes of Modules
-@import "modules";
+// @import "modules";
 
 // Responsive Util
-@import "responsive";
+// @import "responsive";
 
-.jumbotron h1.large-demo-text {
-	// font-size: 150px;
-}
+// .jumbotron h1.large-demo-text {
+// 	font-size: 150px;
+// }
 
 .demo-mw-300 {
-	max-width: 300px;
+  max-width: 300px;
 }
 
 .casual-bg {
-	background-color: #00a46c !important;
+  background-color: #00a46c !important;
 }
 
 .brand.inline {
-	padding-right: 45px;
-	margin-right: 20px;
+  padding-right: 45px;
+  margin-right: 20px;
 }
 
 .casual-menu {
-	border-bottom: 1px solid rgba(18, 18, 18, 0.14);
+  border-bottom: 1px solid rgba(18, 18, 18, 0.14);
 }
 
 .horizontal-app-menu .casual-menu > ul li > a {
-	color: rgba(0, 0, 0, 0.904) !important;
+  color: rgba(0, 0, 0, 0.904) !important;
 }
 
 .horizontal-app-menu .menu-bar ul li.active {
-	border-bottom: 2px solid #00a46c !important;
+  border-bottom: 2px solid #00a46c !important;
 }
 
 .menu-link {
-	padding-bottom: 10px !important;
+  padding-bottom: 10px !important;
 }

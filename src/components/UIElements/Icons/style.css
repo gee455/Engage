@@ -1,6 +1,7 @@
 .icon-text-search {
-    font-size: 42px;
-    width: 150%;
+    font-size: 42px !important;
+    width: 150% !important;
+	font-feature-settings: "liga" 1 !important;
 }
 
 .overflow-hidden {

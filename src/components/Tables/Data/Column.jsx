@@ -3,10 +3,10 @@ import React from 'react';
 function placeFormatter(cell, row, rowIndex, formatExtraData) {
     return (
         <React.Fragment>
-        <a href="#" className="btn btn-tag">China</a>
-        <a href="#" className="btn btn-tag">United States</a>
-        <a href="#" className="btn btn-tag">India</a>
-        <a href="#" className="btn btn-tag">Africa</a>
+        <a href="javascript:void(0);" className="btn btn-tag">China</a>
+        <a href="javascript:void(0);" className="btn btn-tag">United States</a>
+        <a href="javascript:void(0);" className="btn btn-tag">India</a>
+        <a href="javascript:void(0);" className="btn btn-tag">Africa</a>
         </React.Fragment>
     );
 }

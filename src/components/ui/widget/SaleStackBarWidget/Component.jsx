@@ -5,14 +5,15 @@ import ReactEcharts from 'echarts-for-react';
 const Component = () => {
     const option = {
         color: ['#D83C30'],
-        tooltip: {
-            trigger: 'axis'
-        },
+        // tooltip: {
+        //     trigger: 'axis'
+        // },
         grid: {
             left: '0%',
-            right: '20%',
+            right: '0%',
             top: 0,
-            bottom: 60,
+            bottom: 180,
+			width:150,
             containLabel: true
         },
         xAxis: [
@@ -20,7 +21,7 @@ const Component = () => {
                 type: 'category',
                 boundaryGap: true,
                 show: false,
-                data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                data: [1, 2, 3, 4, 5, 6, 7]
             }
         ],
         yAxis: [
@@ -33,6 +34,7 @@ const Component = () => {
             {
                 type: 'bar',
                 showBackground: true,
+				barCategoryGap: '10px',
                 label: {
                     normal: {
                         show: false,
@@ -40,14 +42,23 @@ const Component = () => {
                         // backgroundColor: 'white'
                     }
                 },
-                data: [140, 115, 130, 100, 151, 160, 120, 140, 122]
+                data: [180, 145, 90, 160, 90, 150, 180]
             }
         ]
     };
 
+	const styles={
+		width:'100%',
+		marginLeft:'-30px',
+		marginRight:'20px',
+		paddingLeft:'0px',
+		paddingRight:'0px'		
+	}
+
     return (
         <ReactEcharts 
             option={option}
+			style={styles}
         />
     )
 }

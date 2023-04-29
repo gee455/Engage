@@ -1,6 +1,6 @@
 /*------------------------------------------------------------------
 Pages v5.0
-Theme : Simple
+Theme : Corporate
 Generated From SCSS
 [Table of contents]
 
@@ -37,23 +37,24 @@ Generated From SCSS
 -------------------------------------------------------------------*/
 //Direction
 $direction: ltr; // use `rtl` or `ltr
-@import "../../direction";
+@import "../../pages.scss";
+
+@import "../../direction.scss";
 
 // Color functions
-@import "../../color";
+@import "../../color.scss";
 
 // Mixins tools
-@import "../../mixins";
+@import "../../mixins.scss";
 
 // Import Vars
-@import "var";
+@import "./var.scss";
 
 // Includes of Modules
-@import "../../modules";
+@import "../../modules.scss";
 
 // Responsive Util
-@import "../../responsive";
+@import "../../responsive.scss";
 
 // Custom
-@import "custom"
-
+// @import "custom";

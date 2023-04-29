@@ -15,11 +15,11 @@ const Content = (props) => {
             { /* END List Group Header*/ }
             <ul>
                 { /* BEGIN List Group Item*/ }
-                {/* <AlertGroupItem 
+                <AlertGroupItem 
                     mainText="David Nester Birthday"
                     textRightWarning="Today"
                     textRightMaster="All Day"
-                /> */}
+                />
                 { /* END List Group Item*/ }
                 { /* BEGIN List Group Item*/ }
                 <AlertGroupItem 

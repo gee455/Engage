@@ -4,7 +4,7 @@ const Header = (props) => {
     return (
         <div className="navbar navbar-default">
             <div className="navbar-inner">
-                <a href="#" className="link text-color action p-l-10 p-r-10" 
+                <a href="javascript:void(0);" className="link text-color action p-l-10 p-r-10" 
                     data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax"
                     onClick={(e) => {
                         e.preventDefault()
@@ -17,7 +17,7 @@ const Header = (props) => {
                     John Smith
                     <div className="fs-11 hint-text">Online</div>
                 </div>
-                <a href="#" className="link text-color action p-r-10 pull-right ">
+                <a href="javascript:void(0);" className="link text-color action p-r-10 pull-right ">
                     <i className="pg-icon">more_horizontal</i>
                 </a>
             </div>

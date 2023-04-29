@@ -23,7 +23,7 @@ const Component = (props) => {
         buttonType = ` btn-${props.type}`
 
     return (
-        <button aria-label={props.arialabel} type="button" className={`btn ${buttonType} ${classStyle} ${props.utilclass} ${props.className}`} {...props}>
+        <button aria-label={props.arialabel} type="button" className={`btn ${buttonType} ${classStyle}`} {...props}>
             {props.children}
         </button>
     )
